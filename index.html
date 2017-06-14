@@ -30,8 +30,6 @@ function preload() {
     game.load.spritesheet('clapp', 'Assets/villian.png', 32, 48);
     game.load.spritesheet('startButton','Assets/startbutton.png');
 
-    
-
 }
 
 var camSpeed = 2;
@@ -67,10 +65,10 @@ function create() {
     game.stage.backgroundColor = "#9ab4d7";
     
      // start button
-    startButton = game.add.button(100, 150, 'startButton', actionOnClick, this, 2, 1, 0);
-    startButton.scale.setTo(0.4,0.4);
+    Button = game.add.button(100, 150, 'startButton', actionOnClick, this, 2, 1, 0);
+    Button.scale.setTo(0.4,0.4);
     function actionOnClick () {
-    startButton.visible = false;
+    Button.visible = false;
     player.visible = true;
     villain.visible = true;
     clue.visible = true;
