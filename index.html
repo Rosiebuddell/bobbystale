@@ -169,19 +169,19 @@ function create() {
     cursors = game.input.keyboard.createCursorKeys();
     
     //Creates the variable for the timer based on game time
-    timer = game.time.create(false);
-    
-    //Places the timer text at 550 pixels from left, 16 pixels from top, and sets the same font size and colour as the Scores
-    timerText = game.add.text(550, 16, 'Time: 00:00', { fontSize: '32px', fill: '#fff'});
-    
-    //Stops the timer scrolling with the background
-    timerText.fixedToCamera = true;
-    
-    //Sets up a countdown loop 65,000 milliseconds long (eg 65 seconds)
-  //  timer.loop(65000, gameEnd, this);
-
-    //Starts the timer (so could be linked to the outcome of another function, or a “start” button)
-    timer.start();
+//    timer = game.time.create(false);
+//    
+//    //Places the timer text at 550 pixels from left, 16 pixels from top, and sets the same font size and colour as the Scores
+//    timerText = game.add.text(550, 16, 'Time: 00:00', { fontSize: '32px', fill: '#fff'});
+//    
+//    //Stops the timer scrolling with the background
+//    timerText.fixedToCamera = true;
+//    
+//    //Sets up a countdown loop 65,000 milliseconds long (eg 65 seconds)
+//  //  timer.loop(65000, gameEnd, this);
+//
+//    //Starts the timer (so could be linked to the outcome of another function, or a “start” button)
+//    timer.start();
 
 
     }
@@ -284,7 +284,7 @@ function update() {
 
     //  Add and update the score
     score += 1;
-    scoreText.text = 'Score: ' + score;
+    scoreText.text = 'Clues: ' + score;
     
     }    
     
@@ -300,18 +300,18 @@ function update() {
     score = 0;
     }
     
-    updateTimer()
+    //updateTimer()
     
-    function updateTimer() {
-    minutes = Math.floor(game.time.time / 60000) % 60;
-    seconds = Math.floor(game.time.time / 1000) % 60;
-    //If any of the digits becomes a single digit number, pad it with a zero
-    if (seconds < 10)
-        seconds = '0' + seconds;
-    if (minutes < 10)
-        minutes = '0' + minutes;
- timerText.text = 'Time: ' + minutes + ':'+ seconds;
-    }
+//    function updateTimer() {
+//    minutes = Math.floor(game.time.time / 60000) % 60;
+//    seconds = Math.floor(game.time.time / 1000) % 60;
+//    //If any of the digits becomes a single digit number, pad it with a zero
+//    if (seconds < 10)
+//        seconds = '0' + seconds;
+//    if (minutes < 10)
+//        minutes = '0' + minutes;
+// timerText.text = 'Time: ' + minutes + ':'+ seconds;
+//    }
     
     
 }
